@@ -1,6 +1,7 @@
 
 const { db } = require('./db');
 const { createClient } = require('./client');
+const { isSayCommand, sayCommand } = require('./commands/say');
 require('dotenv').config()
 
 const token = process.env.BOT_TOKEN;
@@ -11,7 +12,9 @@ function startBot() {
 	client.on('messageCreate', (message) => {
 		if (message.author.bot) return;
 
-		console.log(message.content);
+		if (isSayCommand(message)) {
+			sayCommand(message);
+		}
 	});
 	
 	// Log in to Discord with the bot's token
