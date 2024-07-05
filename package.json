@@ -1,0 +1,16 @@
+{
+  "name": "saybotjs",
+  "version": "1.0.0",
+  "description": "A Discord bot with configurable responses and functions.",
+  "main": "master.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node master.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "fs": "^0.0.1-security",
+    "sqlite3": "^5.1.6",
+    "dotenv": "^16.4.4"
+  }
+}
